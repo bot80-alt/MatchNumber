@@ -1,50 +1,94 @@
-# Welcome to your Expo app 👋
+# Match Number
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Match Number is a strategic tile-based puzzle game built using React Native (Expo).  
+The objective is to match and remove valid tile pairs from an 8x8 grid before time runs out.
 
-## Get started
+---
 
-1. Install dependencies
+## Game Rules
 
-   ```bash
-   npm install
-   ```
+A pair of tiles is considered valid if:
 
-2. Start the app
+1. The tiles are adjacent (up, down, left, or right), and
+2. The tiles either:
+   - Sum to 10, or
+   - Have the same number.
 
-   ```bash
-   npx expo start
-   ```
+When a valid pair is removed:
+- Tiles above fall downward with a smooth gravity animation.
+- New tiles are generated at the top.
+- The player earns score for each valid match.
 
-In the output, you'll find options to open the app in a
+Each level is limited to **2 minutes**, requiring fast visual scanning and efficient pattern recognition.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Level Structure
 
-## Get a fresh project
+| Level | Objective               | Time Limit | Grid Size |
+|-------|-------------------------|------------|-----------|
+| 1     | Score minimum to pass   | 2 minutes  | 8x8       |
+| 2     | Higher score threshold  | 2 minutes  | 8x8       |
+| 3+    | Increasing challenge    | 2 minutes  | 8x8       |
 
-When you're ready, run:
+Difficulty increases through board variations and tighter score demands.
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Screenshots
 
-## Learn more
+<div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+    <img src="https://github.com/bot80-alt/MatchNumber/blob/main/assets/images/splash.png" alt="splash" width="260"/>
+    <img src="https://github.com/bot80-alt/MatchNumber/blob/main/assets/images/main.png" alt="main gameplay" width="260"/>
+    <img src="https://github.com/bot80-alt/MatchNumber/blob/main/assets/images/setn.png" alt="settings screen" width="260"/>
+</div>
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Features
 
-## Join the community
+- Clean minimal UI theme
+- Smooth tile removal and gravity animations
+- Responsive touch-based interactions
+- Level-based gameplay progression
+- Settings screen for user customization
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Tech Stack
+
+| Component       | Technology                                  | Purpose                                                |
+|-----------------|----------------------------------------------|--------------------------------------------------------|
+| Framework       | React Native (Expo)                          | Application foundation                                |
+| Language        | TypeScript                                   | Strong typing and maintainable code                   |
+| Navigation      | React Navigation                             | Screen routing                                         |
+| Animations      | React Native Reanimated                      | Tile transitions and gravity effects                   |
+| Gesture Input   | React Native Gesture Handler                 | Tile selection interactions                            |
+| State Logic     | React Hooks (useState, useEffect)            | Game state and timer management                        |
+| Layout System   | Flexbox, Dimensions API                      | Responsive UI                                          |
+| Assets          | Expo Asset Manager                           | Image resource handling                                |
+
+---
+
+## Project Architecture
+
+src/
+├── screens/
+│ ├── SplashScreen.tsx
+│ ├── GameScreen.tsx
+│ └── SettingsScreen.tsx
+│
+├── components/
+│ └── Tile.tsx
+│
+├── utils/
+│ └── gameLogic.ts // Match validation, scoring, gravity mechanics
+│
+├── hooks/
+│ └── useTimer.ts // Level countdown logic
+│
+└── App.tsx // Navigation and app setup
+
+## App Release 
+- Download it from GitHub releases or 
+- Drive link : <href link="https://drive.google.com/drive/folders/1wigsHM3uDYP2ELgyx2WlfHK-nBPBbJ9r?usp=sharing">Download here!</href>
