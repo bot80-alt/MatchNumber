@@ -38,9 +38,9 @@ Difficulty increases through board variations and tighter score demands.
 ## Screenshots
 
 <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-    <img src="https://github.com/bot80-alt/MatchNumber/blob/main/assets/images/splash.png" alt="splash" width="260"/>
-    <img src="https://github.com/bot80-alt/MatchNumber/blob/main/assets/images/main.png" alt="main gameplay" width="260"/>
-    <img src="https://github.com/bot80-alt/MatchNumber/blob/main/assets/images/setn.png" alt="settings screen" width="260"/>
+    <img src="https://github.com/bot80-alt/MatchNumber/blob/master/assets/images/splash.jpg" alt="splash" width="260"/>
+    <img src="https://github.com/bot80-alt/MatchNumber/blob/master/assets/images/main.jpg" alt="main gameplay" width="260"/>
+    <img src="https://github.com/bot80-alt/MatchNumber/blob/master/assets/images/setn.jpg" alt="settings screen" width="260"/>
 </div>
 
 ---
@@ -73,22 +73,18 @@ Difficulty increases through board variations and tighter score demands.
 ## Project Architecture
 
 src/
-├── screens/
-│ ├── SplashScreen.tsx
-│ ├── GameScreen.tsx
-│ └── SettingsScreen.tsx
-│
-├── components/
-│ └── Tile.tsx
-│
-├── utils/
-│ └── gameLogic.ts // Match validation, scoring, gravity mechanics
-│
-├── hooks/
-│ └── useTimer.ts // Level countdown logic
-│
-└── App.tsx // Navigation and app setup
+screens/
+SplashScreen.tsx
+GameScreen.tsx
+SettingsScreen.tsx
+components/
+Tile.tsx
+utils/
+gameLogic.ts // Match validation, scoring, gravity mechanics
+hooks/
+useTimer.ts // Level countdown logic
+App.tsx // Navigation and app setup
 
 ## App Release 
 - Download it from GitHub releases or 
-- Drive link : <href link="https://drive.google.com/drive/folders/1wigsHM3uDYP2ELgyx2WlfHK-nBPBbJ9r?usp=sharing">Download here!</href>
+- Drive link : <a href="https://drive.google.com/drive/folders/1wigsHM3uDYP2ELgyx2WlfHK-nBPBbJ9r?usp=sharing">Download here!</a>
