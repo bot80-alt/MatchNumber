@@ -90,5 +90,5 @@ src/
 └── App.tsx // Navigation and app setup
 
 ## App Release 
-- Download it from GitHub releases or 
+- Download it from GitHub releases
 - Drive link : <href link="https://drive.google.com/drive/folders/1wigsHM3uDYP2ELgyx2WlfHK-nBPBbJ9r?usp=sharing">Download here!</href>
